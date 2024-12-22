@@ -1,0 +1,447 @@
+/* Variables CSS */
+:root {
+  --primary-color: #F08E8F;
+  --secondary-color: #000;
+  --text-color: #333;
+  --background-color: #fff;
+  --border-color: #ccc;
+  --hover-color: #161111;
+  --footer-bg-color: #000;
+  --footer-text-color: #fff;
+  --footer-border-color: #333;
+  --footer-link-color: #ddd;
+  --footer-link-hover-color: #F08E8F;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header .logo h1 {
+  font-size: 28px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--hover-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul li a:active {
+  transform: scale(0.95);
+}
+
+header .icons a {
+  margin: 0 10px;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+/* Main Section */
+.intro {
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 25%;
+  border-right: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 75%;
+}
+
+.product {
+  position: relative;
+  width: calc(33.333% - 20px);
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: var(--background-color);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--secondary-color);
+  color: var(--footer-text-color);
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.product h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Estilo del banner de imagen */
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: #040404;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 40px 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid var(--footer-border-color);
+  padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--footer-link-color);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: var(--footer-link-hover-color);
+  text-decoration: underline;
+}
+
+/* Suscripción */
+.subscribe-section input,
+.subscribe-section select,
+.subscribe-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-section button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.subscribe-section button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Links */
+.links-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-column li {
+  margin-bottom: 8px;
+}
+
+/* Contacto */
+.contact-section p a {
+  color: var(--primary-color);
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.redes-sociales a {
+  font-size: 2rem;
+  color: #fcf5f5;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid var(--footer-border-color);
+  padding: 10px 0;
+  background-color: var(--footer-bg-color);
+  margin-top: 20px;
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-bottom {
+    font-size: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+  }
+
+  .products {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product {
+    width: calc(50% - 20px);
+  }
+
+  .footer-section.links-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: 100%;
+  }
+}
+
+/* Estilo del chatbox flotante */
+#whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#whatsapp-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+#whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#whatsapp-btn:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  position: relative;
+  max-width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--footer-text-color);
+  padding: 10px;
+  font-size: 18px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn-left {
+  left: 10px;
+}
+
+.carousel-btn-right {
+  right: 10px;
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Estilo para las imágenes */
+.product-image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.product .hover-img {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.product:hover .main-img {
+  opacity: 0;
+}
+
+.product:hover .hover-img {
+  opacity: 1;
+}
